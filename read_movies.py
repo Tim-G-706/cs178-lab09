@@ -34,7 +34,7 @@ def print_movie(movie):
 def get_movie_by_title():
     table = get_table()
     title = input("Enter Movie Title: ")
-    response = table.scan(FilterExpression=Attr('title').eq(title))
+    response = table.scan(FilterExpression=Attr('Title').eq(title))
     items = response.get("Items", [])
     
     if not items:
